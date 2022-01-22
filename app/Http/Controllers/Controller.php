@@ -11,7 +11,16 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-    function wpPull() {
-      return view('wpPull');
+    public function places()
+    {
+        return view('places');
+    }
+
+    public function wp_posts()
+    {
+        $client = new \GuzzleHttp\Client();
+        $res = $client->get('https://wordpress.org/news/wp-json/wp/v2/posts');
+        $posts = json_decode($res->getBody());
+        return view('wp_posts', ['posts' => $posts]);
     }
 }

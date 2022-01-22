@@ -18,4 +18,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/wp_pull', [Controller::class, 'wpPull']);
+Route::get('/places', [Controller::class, 'places']);
+
+Route::get('/wp_posts', [Controller::class, 'wp_posts']);

@@ -1,7 +1,10 @@
 require('./bootstrap');
 
 var initMap = () => {
-    const map = new google.maps.Map(document.getElementById("map"), {
+    var mapEl = document.getElementById('map');
+    if (!mapEl)
+        return;
+    const map = new google.maps.Map(mapEl, {
         center: {
             lat: 40.749933,
             lng: -73.98633
@@ -117,11 +120,3 @@ var initMap = () => {
     });
 }
 window.initMap = initMap;
-
-var posts_container = document.getElementById('posts-container');
-
-// if (posts_container) {
-//   var posts = posts_container.innerHTML;
-//   posts = JSON.parse(posts);
-//   console.log(posts);
-// }

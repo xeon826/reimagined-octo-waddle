@@ -1,6 +1,8 @@
 @extends('layout')
+@section('title', 'Places AutoComplete')
+@section('header', 'Places AutoComplete')
 @section('content')
-<div class="pac-card" id="pac-card">
+<div class="pac-card grid-cols-12" id="pac-card">
     <div>
         <div id="title">Autocomplete search</div>
         <div id="type-selector" class="pac-controls">
@@ -32,7 +34,7 @@
         </div>
     </div>
     <div id="pac-container">
-        <input id="pac-input" type="text" placeholder="Enter a location" />
+        <input id="pac-input" class='border border-black' type="text" placeholder="Enter a location" />
     </div>
 </div>
 <div id="map"></div>
@@ -40,5 +42,4 @@
     <span id="place-name" class="title"></span><br />
     <span id="place-address"></span>
 </div>
-<script src='https://maps.googleapis.com/maps/api/js?key={{ env('MAP_API_KEY') }}&callback=window.initMap&libraries=places&v=weekly' async defer></script>
 @endsection

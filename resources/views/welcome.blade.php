@@ -1,4 +1,5 @@
 @extends('layout')
+@section('title', 'Welcome')
 @section('content')
   <div id='welcome'>
     <a href='/wp_posts'><h1>10 Most Recent Wordpress Posts</h1></a>

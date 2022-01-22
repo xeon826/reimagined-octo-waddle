@@ -1,6 +1,7 @@
 @extends('layout')
+@section('title', 'Recent Wordpress Posts')
+@section('header', 'Recent Wordpress Posts')
 @section('content')
-{{-- [ id, slug, status, title, creation date ].  --}}
 <div id='posts-container'>
     <table>
         <thead>
@@ -25,20 +26,20 @@
         <tbody>
             @foreach ($posts as $post)
             <tr>
-                <td>
+                <td class='text-white'>
                     {{$post->id}}
                 </td>
-                <td>
+                <td class='text-white'>
                     {{$post->slug}}
                 </td>
-                <td>
+                <td class='text-white'>
                     {{$post->status}}
                 </td>
-                <td>
-                    {{$post->title->rendered}}
+                <td class='text-white'>
+                    {{html_entity_decode($post->title->rendered)}}
                 </td>
-                <td>
-                    {{$post->date}}
+                <td class='text-white'>
+                    {{date_format(date_create($post->date), 'Y/m/d h:i a')}}
                 </td>
             </tr>
             @endforeach

@@ -21,6 +21,8 @@ class Controller extends BaseController
         $client = new \GuzzleHttp\Client();
         $res = $client->get('https://wordpress.org/news/wp-json/wp/v2/posts');
         $posts = json_decode($res->getBody());
+        // print_r($posts);
+        // die();
         return view('wp_posts', ['posts' => $posts]);
     }
 }

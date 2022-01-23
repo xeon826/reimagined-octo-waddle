@@ -2172,6 +2172,14 @@ var initMap = function initMap() {
 };
 
 window.initMap = initMap;
+var modalToggles = document.querySelectorAll('.modal-toggle');
+modalToggles.forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var modal = document.querySelector("[data-modal=\"".concat(this.dataset.toggleModal, "\"]"));
+    modal.classList.toggle('opacity-0');
+    modal.classList.toggle('pointer-events-none');
+  });
+});
 
 /***/ }),
 

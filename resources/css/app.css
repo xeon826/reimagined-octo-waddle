@@ -11,6 +11,7 @@ body {
     align-items: center;
     align-content: center;
     background-color: #0F172A;
+    background-image: url('/img/bg.jpg');
 }
 
 body {
@@ -92,13 +93,6 @@ body {
     height: 80vh;
 }
 
-/* #posts-container table {
-  text-align: left;
-}
-
-#posts-container table td, #posts-container table th {
-  border: 1px solid black;
-} */
 table {
     width: 100%;
     table-layout: fixed;
@@ -118,8 +112,6 @@ tbody {
 th {
     padding: 20px 15px;
     text-align: left;
-    /* font-weight: 500;
-  font-size: 12px; */
     color: #fff;
     text-transform: uppercase;
 }

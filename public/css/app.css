@@ -473,11 +473,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .max-h-96 {
   max-height: 24rem;
 }
-.w-4\/5 {
-  width: 80%;
-}
 .w-full {
   width: 100%;
+}
+.w-4\/5 {
+  width: 80%;
 }
 .w-11\/12 {
   width: 91.666667%;
@@ -525,6 +525,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-border-opacity: 1;
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
+.bg-sky-500\/50 {
+  background-color: rgb(14 165 233 / 0.5);
+}
+.bg-slate-900\/70 {
+  background-color: rgb(15 23 42 / 0.7);
+}
 .bg-gray-900 {
   --tw-bg-opacity: 1;
   background-color: rgb(17 24 39 / var(--tw-bg-opacity));
@@ -536,6 +542,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-indigo-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(99 102 241 / var(--tw-bg-opacity));
+}
+.bg-sky-500\/20 {
+  background-color: rgb(14 165 233 / 0.2);
+}
+.bg-sky-500\/30 {
+  background-color: rgb(14 165 233 / 0.3);
 }
 .fill-current {
   fill: currentColor;
@@ -555,6 +567,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-left: 1rem;
   padding-right: 1rem;
 }
+.pr-6 {
+  padding-right: 1.5rem;
+}
+.pt-24 {
+  padding-top: 6rem;
+}
 .pb-3 {
   padding-bottom: 0.75rem;
 }
@@ -567,6 +585,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-center {
   text-align: center;
 }
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
@@ -578,6 +600,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
+}
+.font-extrabold {
+  font-weight: 800;
 }
 .font-bold {
   font-weight: 700;
@@ -622,6 +647,7 @@ body {
     align-items: center;
     align-content: center;
     background-color: #0F172A;
+    background-image: url('/img/bg.jpg');
 }
 
 body {
@@ -703,13 +729,6 @@ body {
     height: 80vh;
 }
 
-/* #posts-container table {
-  text-align: left;
-}
-
-#posts-container table td, #posts-container table th {
-  border: 1px solid black;
-} */
 table {
     width: 100%;
     table-layout: fixed;
@@ -729,8 +748,6 @@ tbody {
 th {
     padding: 20px 15px;
     text-align: left;
-    /* font-weight: 500;
-  font-size: 12px; */
     color: #fff;
     text-transform: uppercase;
 }

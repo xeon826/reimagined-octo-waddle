@@ -14,7 +14,14 @@
 </head>
 
 <body class="antialiased">
-    <div class='grid w-4/5 m-auto'>
+  <header class='fixed top-0 left-0 w-full bg-sky-500/20'>
+    <ul class='w-4/5 m-auto flex text-white text-lg font-extrabold py-4'>
+      <li class='pr-6'><a href='/'>Home</a></li>
+      <li class='pr-6'><a href='/wp_posts'>Recent Wordpress Posts</a></li>
+      <li class='pr-6'><a href='/places'>Places Autocomplete</a></li>
+    </ul>
+  </header>
+    <div class='pt-24 grid w-4/5 m-auto'>
         <h1 class='text-white grid-cols-12'>@yield('header')</h1>
         @yield('content')
     </div>

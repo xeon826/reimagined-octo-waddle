@@ -25,7 +25,7 @@
         </thead>
         <tbody>
             @foreach ($posts as $post)
-            <tr data-toggle-modal='{{$post->id}}' class='modal-toggle cursor-pointer'>
+            <tr data-toggle-modal='{{$post->id}}' class='modal-toggle cursor-pointer bg-slate-900/70'>
                 <td class='text-white'>
                     {{$post->id}}
                 </td>
@@ -39,7 +39,7 @@
                     {{html_entity_decode($post->title->rendered)}}
                 </td>
                 <td class='text-white'>
-                    {{date_format(date_create($post->date), 'Y/m/d h:i a')}}
+                    {{date_format(date_create($post->date), 'Y/m/d h:i A')}}
                 </td>
             </tr>
             @endforeach
@@ -59,7 +59,6 @@
             <span class="text-sm">(Esc)</span>
         </div>
 
-        <!-- Add margin if you want to see some of the overlay behind the modal-->
         <div class="modal-content py-4 text-left px-6">
             <!--Title-->
             <div class="flex justify-between items-center pb-3">
@@ -77,7 +76,7 @@
             </div>
 
             <!--Footer-->
-            <div class="flex justify-end pt-2">
+            <div data-toggle-modal='{{$post->id}}' class="modal-toggle flex justify-end pt-2">
                 <button class="modal-close px-4 bg-indigo-500 p-3 rounded-lg text-white hover:bg-indigo-400">Close</button>
             </div>
 
